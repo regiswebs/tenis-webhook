@@ -1,8 +1,7 @@
-const TELEGRAM_TOKEN = '8622265212:AAFfDsSLYY1CG22ikFgFJ05YfP0L7iUQlBE';
-const TELEGRAM_CHAT_ID = '469545869';
-const SUPABASE_URL = 'https://lqqevqarvtzxtgzojhcp.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxxcWV2cWFydnR6eHRnem9qaGNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ3MjE3NDMsImV4cCI6MjA5MDI5Nzc0M30.9nLXdM8i0OkT6d4ejSx2Vp83kJfb_CLlLrD6Vvntj88';
-
+const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_KEY;
 export default async function handler(req, res) {
   if (req.method !== 'POST') { res.status(200).send('OK'); return; }
   const update = req.body;
